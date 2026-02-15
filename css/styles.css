@@ -2876,3 +2876,66 @@ input[type=range]::-webkit-slider-thumb {
         width: 40px;
     }
 }
+
+/* ==========================================
+   MOBILE HERO OVERLAP FIX
+   ========================================== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto !important; /* Allow growing */
+        padding-bottom: 4rem; /* More space at bottom */
+    }
+    
+    .hero-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem; 
+    }
+
+    .hero-left {
+        order: 1; /* Content first */
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .hero-left h1 {
+        white-space: normal; /* Prevent text overflow */
+        word-wrap: break-word;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .hero-trust {
+        justify-content: center;
+    }
+
+    .hero-right {
+        order: 2; /* Visuals second */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 480px; /* Force sufficient height */
+        position: relative;
+        margin-top: 2rem; /* Spacing from text */
+        overflow: visible; /* Prevent clipping */
+    }
+
+    .hero-stack {
+        width: 320px;
+        height: 420px;
+        position: relative;
+        transform: scale(0.9); /* Scale down slightly */
+        margin: 0 auto;
+    }
+
+    /* Reset card positions for stack */
+    .hero-stack .stack-card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
