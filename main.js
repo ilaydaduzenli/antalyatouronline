@@ -7,7 +7,7 @@ import translations from './js/translations.js';
 document.addEventListener('DOMContentLoaded', () => {
 
     // ===== 0. LANGUAGE SYSTEM =====
-    const langToggle = document.getElementById('lang-toggle');
+    const langInput = document.getElementById('lang-toggle-input');
     const currentLang = localStorage.getItem('lang') || 'tr';
 
     // Function to update text content
@@ -33,11 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update Toggle Text
-        if (langToggle) {
-            langToggle.innerText = lang === 'tr' ? 'TR | EN' : 'EN | TR';
-            // Visual state (optional)
-            langToggle.setAttribute('data-lang', lang);
+        // Sync Toggle State
+        if (langInput) {
+            langInput.checked = (lang === 'en');
         }
 
         // Persist
@@ -49,10 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateLanguage(currentLang);
 
     // Toggle Event
-    if (langToggle) {
-        langToggle.addEventListener('click', () => {
-            const current = localStorage.getItem('lang') || 'tr';
-            const next = current === 'tr' ? 'en' : 'tr';
+    if (langInput) {
+        langInput.addEventListener('change', (e) => {
+            const next = e.target.checked ? 'en' : 'tr';
             updateLanguage(next);
         });
     }

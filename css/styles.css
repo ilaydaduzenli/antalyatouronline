@@ -3093,3 +3093,89 @@ input[type=range]::-webkit-slider-thumb {
         font-size: 0.75rem;
     }
 }
+
+/* LANGUAGE SWITCH (Modern) */
+.lang-switch {
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    height: 34px;
+    margin-right: 1rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.lang-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+
+/* Checked State (EN) */
+input:checked + .slider {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(32px);
+}
+
+/* Text Labels */
+.lang-text {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    z-index: 1;
+    transition: color 0.3s;
+    user-select: none;
+}
+
+.lang-text.tr { margin-left: 2px; }
+.lang-text.en { margin-right: 2px; }
+
+/* Text Color Logic */
+input:checked + .slider .lang-text.tr { color: rgba(255,255,255,0.6); }
+input:checked + .slider .lang-text.en { color: white; }
+
+input:not(:checked) + .slider .lang-text.tr { color: var(--color-primary); }
+input:not(:checked) + .slider .lang-text.en { color: #999; }
+
+
+@media (max-width: 1024px) {
+    .lang-switch {
+        margin-right: 0.5rem;
+        transform: scale(0.85); /* Slightly smaller on mobile */
+    }
+}
