@@ -47,7 +47,7 @@
                         <circle cx="12" cy="12" r="10" />
                         <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
                     </svg>
-                    Turlar
+                    <span data-i18n="nav.tours">Turlar</span>
                     <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M6 9l6 6 6-6" />
                     </svg>
@@ -107,7 +107,7 @@
                         <circle cx="6" cy="16" r="2" />
                         <circle cx="18" cy="16" r="2" />
                     </svg>
-                    Transfer
+                    <span data-i18n="nav.transfers">Transfer</span>
                     <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M6 9l6 6 6-6" />
                     </svg>
@@ -151,7 +151,7 @@
                         <path d="M2 17l10 5 10-5" />
                         <path d="M2 12l10 5 10-5" />
                     </svg>
-                    Hizmetler
+                    <span data-i18n="nav.services">Hizmetler</span>
                     <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M6 9l6 6 6-6" />
                     </svg>
@@ -192,7 +192,7 @@
                         <circle cx="12" cy="12" r="10" />
                         <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
                     </svg>
-                    Rotalar
+                    <span data-i18n="nav.routes">Rotalar</span>
                 </a>
                 <a href="blog.html" class="nav-item">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
@@ -200,7 +200,7 @@
                         <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
                         <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
                     </svg>
-                    Blog
+                    <span data-i18n="nav.blog">Blog</span>
                 </a>
                 <a href="about.html" class="nav-item">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
@@ -208,14 +208,14 @@
                         <circle cx="12" cy="12" r="10" />
                         <path d="M12 16v-4M12 8h.01" />
                     </svg>
-                    Hakkımızda
+                    <span data-i18n="nav.about">Hakkımızda</span>
                 </a>
                 <a href="contact.html" class="nav-item">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
                     </svg>
-                    İletişim
+                    <span data-i18n="nav.contact">İletişim</span>
                 </a>
             </nav>
 
@@ -228,8 +228,10 @@
                     </svg>
                     WhatsApp
                 </a>
-                <a href="tours.html" class="btn btn-outline btn-sm">Tur Bul</a>
+                <a href="tours.html" class="btn btn-outline btn-sm" data-i18n="nav.findTour">Tur Bul</a>
             </div>
+
+            <button id="lang-toggle">TR | EN</button>
 
             <button class="hamburger" aria-label="Menü aç">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -314,24 +316,25 @@
             <div class="hero-inner">
                 <!-- Left Column -->
                 <div class="hero-left">
-                    <div class="badge badge-accent">✦ Premium Seyahat</div>
-                    <h1>Antalya'yı Yerel Gibi <span class="text-secondary">Keşfet.</span></h1>
-                    <p class="hero-sub">Kişiye özel günlük turlar, VIP transfer ve size özel rota planlaması.
+                    <div class="badge badge-accent" data-i18n="hero.badge">✦ Premium Seyahat</div>
+                    <h1 data-i18n="hero.title">Antalya'yı Yerel Gibi <span class="text-secondary">Keşfet.</span></h1>
+                    <p class="hero-sub" data-i18n="hero.subtitle">Kişiye özel günlük turlar, VIP transfer ve size özel
+                        rota planlaması.
                         Kalabalıktan uzak, ayrıcalıklı bir deneyim.</p>
 
                     <div class="hero-actions">
-                        <a href="tours.html" class="btn btn-primary btn-lg">Turunu Seç</a>
-                        <a href="#" class="btn btn-outline btn-lg">Hızlı Teklif</a>
+                        <a href="tours.html" class="btn btn-primary btn-lg" data-i18n="hero.ctaPrimary">Turunu Seç</a>
+                        <a href="#" class="btn btn-outline btn-lg" data-i18n="hero.ctaSecondary">Hızlı Teklif</a>
                     </div>
 
                     <div class="hero-trust">
-                        <div class="hero-trust-item">
+                        <div class="hero-trust-item" data-i18n="hero.trust1">
                             <span class="dot"></span> 4.9 Google Puanı
                         </div>
-                        <div class="hero-trust-item">
+                        <div class="hero-trust-item" data-i18n="hero.trust2">
                             <span class="dot"></span> 10.000+ Mutlu Misafir
                         </div>
-                        <div class="hero-trust-item">
+                        <div class="hero-trust-item" data-i18n="hero.trust3">
                             <span class="dot"></span> TÜRSAB Lisanslı
                         </div>
                     </div>
@@ -347,12 +350,13 @@
                                 style="object-fit:cover;width:100%;height:100%;border-radius:20px;">
                             <div class="stack-card-body">
                                 <div class="stack-card-meta">
-                                    <span class="dur">9-10 Saat</span>
+                                    <span class="dur" data-i18n="heroCard.duration">🕒 9-10 Saat</span>
+                                    <span data-i18n="heroCard.locPamukkale">📍 Pamukkale</span>
                                     <span>★ 4.9 (120)</span>
                                 </div>
-                                <h4>Pamukkale & Hierapolis</h4>
+                                <h4 data-i18n="heroCard.pamukkaleTitle">Pamukkale & Hierapolis</h4>
                                 <div class="stack-card-price">
-                                    <small>Başlayan Fiyat</small>
+                                    <small data-i18n="heroCard.startingPrice">Başlayan Fiyat</small>
                                     €45
                                 </div>
                             </div>
@@ -363,12 +367,13 @@
                                 style="object-fit:cover;width:100%;height:100%;border-radius:20px;">
                             <div class="stack-card-body">
                                 <div class="stack-card-meta">
-                                    <span class="dur">7 Saat</span>
+                                    <span class="dur" data-i18n="heroCard.duration">🕒 7 Saat</span>
+                                    <span data-i18n="heroCard.locKemer">📍 Kemer Marina</span>
                                     <span>★ 4.8 (85)</span>
                                 </div>
-                                <h4>Kemer Tekne Turu</h4>
+                                <h4 data-i18n="heroCard.boatTitle">Kemer Tekne Turu</h4>
                                 <div class="stack-card-price">
-                                    <small>Başlayan Fiyat</small>
+                                    <small data-i18n="heroCard.startingPrice">Başlayan Fiyat</small>
                                     €35
                                 </div>
                             </div>
@@ -379,12 +384,13 @@
                                 style="object-fit:cover;width:100%;height:100%;border-radius:20px;">
                             <div class="stack-card-body">
                                 <div class="stack-card-meta">
-                                    <span class="dur">4 Saat</span>
+                                    <span class="dur" data-i18n="heroCard.duration">🕒 4 Saat</span>
+                                    <span data-i18n="heroCard.locCity">📍 Şehir Merkezi</span>
                                     <span>★ 4.7 (210)</span>
                                 </div>
-                                <h4>Antalya Şehir Turu</h4>
+                                <h4 data-i18n="heroCard.cityTitle">Antalya Şehir Turu</h4>
                                 <div class="stack-card-price">
-                                    <small>Başlayan Fiyat</small>
+                                    <small data-i18n="heroCard.startingPrice">Başlayan Fiyat</small>
                                     €30
                                 </div>
                             </div>
@@ -405,10 +411,11 @@
             <div class="flex items-center" style="gap:0.75rem;">
                 <span style="color:#f59e0b;font-size:1rem;font-weight:700;">★★★★★</span>
                 <div>
-                    <div style="font-weight:700;font-size:0.8125rem;color:var(--color-primary);">10.000+ Mutlu Misafir
+                    <div style="font-weight:700;font-size:0.8125rem;color:var(--color-primary);"
+                        data-i18n="socialProof.happyGuests">10.000+ Mutlu Misafir
                     </div>
-                    <div
-                        style="font-size:0.6875rem;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em;">
+                    <div style="font-size:0.6875rem;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em;"
+                        data-i18n="socialProof.platform">
                         Google & TripAdvisor</div>
                 </div>
             </div>

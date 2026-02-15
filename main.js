@@ -2,7 +2,62 @@
    Antalyatour.online — Motion System (main.js)
    Shared across all pages.
    ============================================ */
+import translations from './js/translations.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ===== 0. LANGUAGE SYSTEM =====
+    const langToggle = document.getElementById('lang-toggle');
+    const currentLang = localStorage.getItem('lang') || 'tr';
+
+    // Function to update text content
+    const updateLanguage = (lang) => {
+        const t = translations[lang];
+        if (!t) return;
+
+        // Recursive function to flat-traverse the object or just simple key lookup?
+        // Simple approach: Iterate over all elements with data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const keys = key.split('.'); // e.g., "hero.title" -> ["hero", "title"]
+
+            let val = t;
+            keys.forEach(k => { val = val ? val[k] : null; });
+
+            if (val) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = val;
+                } else {
+                    el.innerHTML = val; // Use innerHTML to allow <span> in translations
+                }
+            }
+        });
+
+        // Update Toggle Text
+        if (langToggle) {
+            langToggle.innerText = lang === 'tr' ? 'TR | EN' : 'EN | TR';
+            // Visual state (optional)
+            langToggle.setAttribute('data-lang', lang);
+        }
+
+        // Persist
+        localStorage.setItem('lang', lang);
+        document.documentElement.lang = lang;
+    };
+
+    // Initialize
+    updateLanguage(currentLang);
+
+    // Toggle Event
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const current = localStorage.getItem('lang') || 'tr';
+            const next = current === 'tr' ? 'en' : 'tr';
+            updateLanguage(next);
+        });
+    }
+
+    // ===== 1. HEADER SCROLL EFFECT =====
 
     // ===== 1. HEADER SCROLL EFFECT =====
     const siteHeader = document.querySelector('.site-header') || document.querySelector('.header');
