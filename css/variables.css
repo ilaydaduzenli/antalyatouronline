@@ -1,0 +1,89 @@
+:root {
+    /* Color Palette - Premium Mediterranean */
+    --color-primary: #0B1220;
+    /* Deep Navy - Unchanged */
+    --color-secondary: #25C4B7;
+    /* Aqua - Unchanged but used sparingly */
+    --color-accent: #F2E9DC;
+    /* Soft Sand */
+    --color-white: #FFFFFF;
+    --color-bg-light: #F9FAFB;
+    /* Slightly cooler light gray for crispness */
+    --color-bg-sand: #F2E9DC;
+    /* Explicit Sand BG */
+
+    --color-text-dark: #111827;
+    /* Near black */
+    --color-text-light: #F9FAFB;
+    --color-text-muted: #6B7280;
+    /* Neutral gray */
+    --color-border: #E5E7EB;
+
+    /* Typography - Confident & Editorial */
+    --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-family-heading: 'Outfit', sans-serif;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    /* Larger */
+    --font-size-4xl: 3rem;
+    /* Larger */
+    --font-size-5xl: 4.5rem;
+    /* Hero Headline */
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Spacing - Increased for Luxury Feel */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 6rem;
+    /* Increased */
+    --space-24: 8rem;
+    /* Increased */
+    --space-32: 10rem;
+    /* Increased */
+
+    /* Shadows - softer, layered */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    --shadow-glass: 0 8px 32px 0 rgba(11, 18, 32, 0.15);
+    /* Special glass shadow */
+
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-base: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Smoother editorial easing */
+    --transition-slow: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Z-Index */
+    --z-modal: 1000;
+    --z-overlay: 900;
+    --z-header: 800;
+    --z-dropdown: 700;
+    --z-tooltip: 600;
+}

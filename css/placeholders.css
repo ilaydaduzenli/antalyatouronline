@@ -1,0 +1,152 @@
+/* ============================================
+   VISUAL PLACEHOLDERS — placeholders.css
+   Gradient mesh, noise overlay, vignette, SVG patterns.
+   Usage: <div class="ph ph-ocean"></div>
+   ============================================ */
+
+/* Base placeholder */
+.ph {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg, 16px);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Noise overlay */
+.ph::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 128px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Vignette */
+.ph::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.12) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Aspect ratios */
+.ph-16-10 {
+    aspect-ratio: 16 / 10;
+}
+
+.ph-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+.ph-3-2 {
+    aspect-ratio: 3 / 2;
+}
+
+.ph-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.ph-hero {
+    aspect-ratio: 21 / 9;
+}
+
+/* ===== GRADIENT MESH THEMES ===== */
+
+.ph-ocean {
+    background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 30%, #38bdf8 50%, #7dd3fc 70%, #bae6fd 100%);
+}
+
+.ph-mountain {
+    background: linear-gradient(160deg, #1e3a5f 0%, #334155 25%, #64748b 50%, #94a3b8 75%, #cbd5e1 100%);
+}
+
+.ph-sunset {
+    background: linear-gradient(135deg, #7c2d12 0%, #c2410c 20%, #ea580c 40%, #fb923c 60%, #fed7aa 80%, #fff7ed 100%);
+}
+
+.ph-forest {
+    background: linear-gradient(150deg, #14532d 0%, #166534 25%, #22c55e 50%, #86efac 75%, #dcfce7 100%);
+}
+
+.ph-sand {
+    background: linear-gradient(135deg, #92400e 0%, #b45309 25%, #d97706 50%, #fbbf24 75%, #fef3c7 100%);
+}
+
+.ph-city {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4338ca 50%, #818cf8 75%, #c7d2fe 100%);
+}
+
+.ph-aqua {
+    background: linear-gradient(145deg, #0f766e 0%, #14b8a6 30%, #2dd4bf 50%, #5eead4 70%, #ccfbf1 100%);
+}
+
+.ph-rose {
+    background: linear-gradient(135deg, #881337 0%, #be123c 25%, #f43f5e 50%, #fda4af 75%, #fff1f2 100%);
+}
+
+/* ===== SVG PATTERN OVERLAYS ===== */
+
+/* Abstract wave */
+.ph-wave::before {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='rgba(255,255,255,0.08)' d='M0,192L48,176C96,160,192,128,288,144C384,160,480,224,576,234.7C672,245,768,203,864,176C960,149,1056,139,1152,154.7C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'/%3E%3C/svg%3E") bottom/cover no-repeat, url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 100% 40%, 128px;
+}
+
+/* Mountain silhouette */
+.ph-mountains::before {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200'%3E%3Cpath fill='rgba(255,255,255,0.06)' d='M0,200L120,180L240,120L360,160L480,100L600,140L720,80L840,130L960,70L1080,110L1200,60L1320,100L1440,50L1440,200Z'/%3E%3C/svg%3E") bottom/cover no-repeat, url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 100% 50%, 128px;
+}
+
+/* Center icon overlay (use with data-icon) */
+.ph-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ph-icon .ph-ico {
+    position: relative;
+    z-index: 3;
+    font-size: 2.5rem;
+    opacity: 0.35;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Shimmer loading */
+@keyframes phShimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.ph-shimmer {
+    background: linear-gradient(90deg, transparent 25%, rgba(255, 255, 255, 0.15) 50%, transparent 75%);
+    background-size: 200% 100%;
+    animation: phShimmer 2s ease-in-out infinite;
+}
+
+/* Lazy load fade-in */
+.ph-lazy {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.ph-lazy.loaded {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ph-shimmer {
+        animation: none;
+    }
+}
