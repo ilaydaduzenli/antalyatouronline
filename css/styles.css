@@ -1034,64 +1034,42 @@ h6 {
 
 @media (max-width: 768px) {
     .orbit-section {
-        padding: 2rem 0 4rem;
-        /* Safe area for bottom bar */
+        padding: 2rem 0 3rem;
         overflow: hidden;
-        /* Prevent body horizontal scroll */
     }
 
-    .orbit-section>.container {
-        margin-bottom: 1rem;
-    }
-
+    /* Hide desktop animation */
     .orbit-wrap {
         display: none;
     }
 
+    /* Show mobile scroll rail */
     .orbit-mobile {
         display: block;
     }
 
     .orbit-mobile-badge {
         text-align: center;
-        margin-bottom: 1.5rem;
-        padding: 0 1rem;
-    }
-
-    .orbit-mobile-badge .oc-label {
-        font-size: 0.6875rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--color-secondary);
-        font-weight: 700;
-        margin-bottom: 0.5rem;
+        margin-bottom: 2rem;
+        padding: 0 1.5rem;
     }
 
     .orbit-mobile-badge .oc-title {
-        font-family: var(--font-family-heading);
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--color-primary);
-        line-height: 1;
+        font-size: 1.75rem;
+        line-height: 1.1;
         margin-bottom: 0.5rem;
-    }
-
-    .orbit-mobile-badge .oc-sub {
-        font-size: 0.875rem;
-        color: var(--color-text-muted);
     }
 
     .orbit-mobile-scroll {
         display: flex;
-        flex-wrap: nowrap;
-        gap: 0.75rem;
+        gap: 12px;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
         padding: 0 1.5rem 1rem;
         scrollbar-width: none;
-        mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
-        -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+        mask-image: linear-gradient(to right, transparent 0%, black 16px, black calc(100% - 16px), transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 16px, black calc(100% - 16px), transparent 100%);
     }
 
     .orbit-mobile-scroll::-webkit-scrollbar {
@@ -1100,27 +1078,27 @@ h6 {
 
     .orbit-mobile-scroll .orbit-chip {
         flex: 0 0 auto;
-        position: static;
-        scroll-snap-align: start;
-        transform: none;
-        animation: none !important;
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 0.6rem 1rem;
+        scroll-snap-align: center;
+        width: auto;
+        padding: 0.75rem 1.25rem;
+        border-radius: 100px;
         background: #fff;
         border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 100px;
-        font-size: 0.875rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        font-size: 0.9rem;
         font-weight: 600;
-        color: var(--color-primary);
         white-space: nowrap;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        animation: none !important;
+        transform: none !important;
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .orbit-mobile-scroll .orbit-chip:active {
+        transform: scale(0.96) !important;
         background: var(--color-bg-light);
-        transform: scale(0.98);
     }
 }
 
@@ -1336,33 +1314,41 @@ h6 {
    ========================================== */
 @media (max-width: 768px) {
     .discover-rail {
-        overflow: visible;
-        /* Override desktop overflow:hidden so scroll works */
-        padding: 2rem 0 2.5rem;
+        overflow: hidden;
+        /* Keep page clean, rail itself handles scroll */
+        padding: 2rem 0;
     }
 
     .discover-rail .rail-heading {
         padding: 0 1.5rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
     }
 
     .discover-rail .rail-heading h2 {
         font-size: 1.5rem;
     }
 
+    /* Hide desktop animation rows */
     .discover-rail .rail-row.right {
         display: none;
     }
 
+    /* Mobile single row */
     .discover-rail .rail-row.left {
         animation: none !important;
-        width: auto;
-        /* Override max-content */
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 12px;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
-        padding: 0 1.5rem 1.5rem;
-        gap: 1rem;
+        padding: 0 1.5rem 2rem;
+        /* Bottom padding for shadow */
+        margin: 0;
+        mask-image: linear-gradient(to right, transparent 0%, black 16px, black calc(100% - 16px), transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 16px, black calc(100% - 16px), transparent 100%);
         scrollbar-width: none;
     }
 
@@ -1372,19 +1358,32 @@ h6 {
 
     .discover-rail .rail-row.left .rail-card {
         flex: 0 0 auto;
+        width: auto;
+        min-width: 150px;
+        max-width: 180px;
         scroll-snap-align: start;
         animation: none !important;
-        width: 75vw;
-        /* Shows ~1.2 cards to hint scrolling */
-        min-width: 240px;
+        transform: none !important;
         background: #fff;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        padding: 0.75rem;
     }
 
+    .discover-rail .rail-row.left .rail-card .rc-img {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+    .discover-rail .rail-row.left .rail-card .rc-text {
+        font-size: 0.8rem;
+    }
+
+    /* Hide desktop masks since we use mask-image */
     .discover-rail::before,
     .discover-rail::after {
-        width: 24px;
+        display: none;
     }
 }
 
