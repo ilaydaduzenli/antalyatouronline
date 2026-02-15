@@ -2939,3 +2939,65 @@ input[type=range]::-webkit-slider-thumb {
         left: 0;
     }
 }
+
+/* ==========================================
+   ORBIT MOBILE ANIMATION RESTORE
+   ========================================== */
+@media (max-width: 768px) {
+    .orbit-section {
+        height: 480px !important;
+        padding: 0 0 2rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+    }
+
+    /* Force Orbit Wrap Visible & Scaled */
+    .orbit-wrap {
+        display: block !important;
+        transform: scale(0.60) !important;
+        transform-origin: center center !important;
+        margin: -50px auto 0 !important;
+        width: 520px !important; /* Ensure desktop width is kept before scale */
+        height: 520px !important;
+    }
+
+    /* Adjust Center Text */
+    .orbit-center .oc-title {
+        font-size: 2rem !important;
+    }
+    
+    .orbit-center .oc-sub {
+        font-size: 0.9rem !important;
+    }
+
+    /* Hide the static rail */
+    .orbit-mobile {
+        display: none !important;
+    }
+    
+    /* Hide the mobile badge since the center text does the job */
+    .orbit-mobile-badge {
+        display: none !important;
+    }
+}
+
+/* ORBIT LAYOUT FIX */
+@media (max-width: 768px) {
+    .orbit-section {
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        padding-top: 3rem !important;
+    }
+    .orbit-section .container {
+        width: 100%;
+        margin-bottom: 0 !important;
+        z-index: 10;
+        position: relative;
+    }
+    .orbit-wrap {
+        margin-top: -30px !important;
+        transform: scale(0.65) !important;
+    }
+}
