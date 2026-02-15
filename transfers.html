@@ -18,36 +18,279 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <div class="container flex justify-between items-center">
-            <a href="index.html" class="logo">Antalyatour<span class="text-secondary">.online</span></a>
-            <nav class="hidden md:flex" style="gap:2rem;">
-                <a href="index.html" class="nav-link">Anasayfa</a>
-                <a href="tours.html" class="nav-link">Turlar</a>
-                <a href="transfers.html" class="nav-link"
-                    style="color:var(--color-secondary);font-weight:600;">Transfer</a>
-                <a href="about.html" class="nav-link">Hakkımızda</a>
-                <a href="contact.html" class="nav-link">İletişim</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Antalyatour<span>.online</span></a>
+
+            <nav class="main-nav">
+                <!-- Turlar — mega -->
+                <div class="nav-item" data-mega>
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                    </svg>
+                    Turlar
+                    <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                    <div class="mega-menu">
+                        <div class="mega-grid mega-grid-4">
+                            <div class="mega-col">
+                                <h4>Kategoriler</h4>
+                                <ul>
+                                    <li><a href="tours.html"><span class="mi">☀️</span> Günübirlik Turlar</a></li>
+                                    <li><a href="tours.html"><span class="mi">🚤</span> Tekne Turları</a></li>
+                                    <li><a href="tours.html"><span class="mi">🌿</span> Doğa & Macera</a></li>
+                                    <li><a href="tours.html"><span class="mi">🏛️</span> Kültür Turları</a></li>
+                                    <li><a href="tours.html"><span class="mi">👨‍👩‍👧‍👦</span> Aile Turları</a></li>
+                                    <li><a href="tours.html"><span class="mi">💎</span> VIP Turlar</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Popüler Turlar</h4>
+                                <ul>
+                                    <li><a href="tour-detail.html"><span class="mi">♨️</span> Pamukkale Turu</a></li>
+                                    <li><a href="tour-detail.html"><span class="mi">🚤</span> Kemer Tekne</a></li>
+                                    <li><a href="tour-detail.html"><span class="mi">🏙️</span> Şehir Turu</a></li>
+                                    <li><a href="tour-detail.html"><span class="mi">🌊</span> Rafting</a></li>
+                                    <li><a href="tour-detail.html"><span class="mi">🚙</span> Jeep Safari</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Bölgeler</h4>
+                                <ul>
+                                    <li><a href="tours.html"><span class="mi">📍</span> Kemer</a></li>
+                                    <li><a href="tours.html"><span class="mi">📍</span> Side</a></li>
+                                    <li><a href="tours.html"><span class="mi">📍</span> Alanya</a></li>
+                                    <li><a href="tours.html"><span class="mi">📍</span> Belek</a></li>
+                                    <li><a href="tours.html"><span class="mi">📍</span> Kaş</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <div class="mega-promo">
+                                    <div class="mp-badge">Bu Hafta Öne Çıkan</div>
+                                    <img src="assets/images/promo_suluada.jpg" alt="Suluada" class="mp-img"
+                                        style="object-fit:cover;">
+                                    <div class="mp-title">Suluada Tekne Turu</div>
+                                    <div class="mp-desc">Türk Maldivleri'nde turkuaz sularda unutulmaz bir gün.</div>
+                                    <a href="tour-detail.html" class="mp-link">İncele →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transfer — mega (Active) -->
+                <div class="nav-item active" data-mega>
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="6" width="15" height="10" rx="2" />
+                        <path d="M16 10h4l3 4v2h-7" />
+                        <circle cx="6" cy="16" r="2" />
+                        <circle cx="18" cy="16" r="2" />
+                    </svg>
+                    Transfer
+                    <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                    <div class="mega-menu" style="min-width:560px;">
+                        <div class="mega-grid mega-grid-3">
+                            <div class="mega-col">
+                                <h4>Transfer Hizmetleri</h4>
+                                <ul>
+                                    <li><a href="transfers.html"><span class="mi">✈️</span> Airport Transfer</a></li>
+                                    <li><a href="transfers.html"><span class="mi">🏨</span> Otel Transfer</a></li>
+                                    <li><a href="transfers.html"><span class="mi">🚗</span> Şoförlü Araç</a></li>
+                                    <li><a href="transfers.html"><span class="mi">🚐</span> VIP Vito / Sprinter</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Popüler Rotalar</h4>
+                                <ul>
+                                    <li><a href="transfers.html"><span class="mi">📍</span> Havalimanı → Kemer</a></li>
+                                    <li><a href="transfers.html"><span class="mi">📍</span> Havalimanı → Side</a></li>
+                                    <li><a href="transfers.html"><span class="mi">📍</span> Havalimanı → Alanya</a></li>
+                                    <li><a href="transfers.html"><span class="mi">📍</span> Havalimanı → Belek</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <div class="mega-promo">
+                                    <div class="mp-badge">Sabit Fiyat Garantisi</div>
+                                    <div class="mp-title">Özel Transfer</div>
+                                    <div class="mp-desc">Gizli ücret yok 7/24 hizmet. Online fiyat hesapla.</div>
+                                    <a href="transfers.html" class="mp-link">Fiyat Hesapla →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hizmetler — mega -->
+                <div class="nav-item" data-mega>
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <path d="M2 17l10 5 10-5" />
+                        <path d="M2 12l10 5 10-5" />
+                    </svg>
+                    Hizmetler
+                    <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                    <div class="mega-menu" style="min-width:480px;">
+                        <div class="mega-grid mega-grid-3">
+                            <div class="mega-col">
+                                <h4>Hizmetlerimiz</h4>
+                                <ul>
+                                    <li><a href="services.html"><span class="mi">🗺️</span> Özel Rota Planlama</a></li>
+                                    <li><a href="services.html"><span class="mi">👥</span> Grup Turları</a></li>
+                                    <li><a href="services.html"><span class="mi">🏢</span> Kurumsal / Etkinlik</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>&nbsp;</h4>
+                                <ul>
+                                    <li><a href="services.html"><span class="mi">🎓</span> Rehberlik</a></li>
+                                    <li><a href="services.html"><span class="mi">🛎️</span> Concierge</a></li>
+                                    <li><a href="services.html"><span class="mi">📋</span> Paket Turlar</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <div class="mega-promo">
+                                    <div class="mp-badge">Yeni</div>
+                                    <div class="mp-title">Size Özel Rota</div>
+                                    <div class="mp-desc">Hayalinizdeki Antalya turunu birlikte planlayalım.</div>
+                                    <a href="contact.html" class="mp-link">İletişim →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple links -->
+                <a href="tours.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                    </svg>
+                    Rotalar
+                </a>
+                <a href="blog.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
+                    </svg>
+                    Blog
+                </a>
+                <a href="about.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4M12 8h.01" />
+                    </svg>
+                    Hakkımızda
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                    </svg>
+                    İletişim
+                </a>
             </nav>
-            <div class="hidden md:flex" style="gap:0.75rem;">
-                <a href="#" class="btn btn-primary btn-sm">Hızlı Teklif Al</a>
+
+            <div class="header-cta">
+                <a href="https://wa.me/905551234567" class="btn btn-primary btn-sm"
+                    style="background:#25d366;border-color:#25d366;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    WhatsApp
+                </a>
+                <a href="tours.html" class="btn btn-outline btn-sm">Tur Bul</a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden" style="color:var(--color-primary);">
-                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+
+            <button class="hamburger" aria-label="Menü aç">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden"
-            style="position:absolute;top:100%;left:0;width:100%;background:#fff;padding:1.5rem;box-shadow:0 12px 24px rgba(0,0,0,0.08);z-index:100;">
-            <a href="index.html" style="display:block;padding:0.75rem 0;font-weight:500;">Anasayfa</a>
-            <a href="tours.html" style="display:block;padding:0.75rem 0;font-weight:500;">Turlar</a>
-            <a href="transfers.html"
-                style="display:block;padding:0.75rem 0;font-weight:500;color:var(--color-secondary);">Transfer</a>
-            <a href="about.html" style="display:block;padding:0.75rem 0;font-weight:500;">Hakkımızda</a>
-            <a href="contact.html" style="display:block;padding:0.75rem 0;font-weight:500;">İletişim</a>
-        </div>
     </header>
+
+    <!-- Mobile drawer overlay -->
+    <div class="drawer-overlay"></div>
+
+    <!-- Mobile drawer -->
+    <aside class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="logo">Antalyatour<span>.online</span></a>
+            <button class="drawer-close" aria-label="Kapat">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="drawer-nav">
+            <a href="index.html" class="drawer-link"><span class="dl-icon">🏠</span> Anasayfa</a>
+
+            <a href="#" class="drawer-link" data-accordion>
+                <span class="dl-icon">🧭</span> Turlar
+                <svg class="dl-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </a>
+            <div class="drawer-sub">
+                <a href="tours.html"><span class="mi">☀️</span> Günübirlik Turlar</a>
+                <a href="tours.html"><span class="mi">🚤</span> Tekne Turları</a>
+                <a href="tours.html"><span class="mi">🌿</span> Doğa & Macera</a>
+                <a href="tours.html"><span class="mi">🏛️</span> Kültür Turları</a>
+                <a href="tours.html"><span class="mi">💎</span> VIP Turlar</a>
+            </div>
+
+            <!-- Pre-expanded Transfer menu -->
+            <a href="#" class="drawer-link active expanded" data-accordion>
+                <span class="dl-icon">🚐</span> Transfer
+                <svg class="dl-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </a>
+            <div class="drawer-sub open">
+                <a href="transfers.html"><span class="mi">✈️</span> Airport Transfer</a>
+                <a href="transfers.html"><span class="mi">🏨</span> Otel Transfer</a>
+                <a href="transfers.html"><span class="mi">🚗</span> Şoförlü Araç</a>
+                <a href="transfers.html"><span class="mi">🚐</span> VIP Vito / Sprinter</a>
+            </div>
+
+            <a href="#" class="drawer-link" data-accordion>
+                <span class="dl-icon">⚡</span> Hizmetler
+                <svg class="dl-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </a>
+            <div class="drawer-sub">
+                <a href="services.html"><span class="mi">🗺️</span> Özel Rota Planlama</a>
+                <a href="services.html"><span class="mi">👥</span> Grup Turları</a>
+                <a href="services.html"><span class="mi">🏢</span> Kurumsal</a>
+                <a href="services.html"><span class="mi">🎓</span> Rehberlik</a>
+                <a href="services.html"><span class="mi">🛎️</span> Concierge</a>
+            </div>
+
+            <a href="blog.html" class="drawer-link"><span class="dl-icon">📖</span> Blog</a>
+            <a href="about.html" class="drawer-link"><span class="dl-icon">ℹ️</span> Hakkımızda</a>
+            <a href="contact.html" class="drawer-link"><span class="dl-icon">💬</span> İletişim</a>
+        </div>
+        <div class="drawer-actions">
+            <a href="https://wa.me/905551234567" class="da-wa">💬 WhatsApp</a>
+            <a href="tel:+905551234567" class="da-call">📞 Ara</a>
+            <a href="contact.html" class="da-loc">📍 Konum</a>
+        </div>
+    </aside>
 
     <!-- Page Hero -->
     <section class="page-hero center">

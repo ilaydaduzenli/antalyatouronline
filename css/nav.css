@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10000;
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -261,7 +261,7 @@
     max-width: 380px;
     height: 100%;
     background: #fff;
-    z-index: 2000;
+    z-index: 20000;
     display: flex;
     flex-direction: column;
     transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -277,7 +277,7 @@
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 1999;
+    z-index: 19999;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s;
@@ -436,7 +436,7 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
 
     .main-nav,
     .header-cta {
@@ -453,7 +453,7 @@
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .hamburger {
         display: none;
     }
