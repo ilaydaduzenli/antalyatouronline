@@ -43,11 +43,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const drawer = document.querySelector('.mobile-drawer');
     const overlay = document.querySelector('.drawer-overlay');
     const drawerClose = document.querySelector('.drawer-close');
-    const openDrawer = () => { drawer?.classList.add('open'); overlay?.classList.add('open'); document.body.style.overflow = 'hidden'; };
-    const closeDrawer = () => { drawer?.classList.remove('open'); overlay?.classList.remove('open'); document.body.style.overflow = ''; };
+
+    const openDrawer = () => {
+        drawer?.classList.add('open');
+        overlay?.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        hamburger?.setAttribute('aria-expanded', 'true');
+        // Focus first link in drawer
+        setTimeout(() => drawer?.querySelector('.drawer-link')?.focus(), 100);
+    };
+    const closeDrawer = () => {
+        drawer?.classList.remove('open');
+        overlay?.classList.remove('open');
+        document.body.style.overflow = '';
+        hamburger?.setAttribute('aria-expanded', 'false');
+        hamburger?.focus();
+    };
+
+    // Set initial ARIA state
+    if (hamburger && drawer) {
+        drawer.id = drawer.id || 'mobile-drawer';
+        hamburger.setAttribute('aria-controls', drawer.id);
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+
     hamburger?.addEventListener('click', openDrawer);
     drawerClose?.addEventListener('click', closeDrawer);
     overlay?.addEventListener('click', closeDrawer);
+
+    // Close drawer on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer?.classList.contains('open')) {
+            closeDrawer();
+        }
+    });
 
     // Drawer accordion
     document.querySelectorAll('.drawer-link[data-accordion]').forEach(link => {

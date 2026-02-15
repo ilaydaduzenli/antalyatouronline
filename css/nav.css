@@ -326,6 +326,8 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.85rem 1.25rem;
+    min-height: 48px;
+    /* Accessible tap target */
     font-size: 0.9375rem;
     font-weight: 500;
     color: var(--color-primary);
@@ -337,6 +339,11 @@
 .drawer-link.active {
     background: rgba(37, 196, 183, 0.06);
     color: var(--color-secondary);
+}
+
+.drawer-link:active {
+    background: rgba(37, 196, 183, 0.12);
+    transform: scale(0.99);
 }
 
 .drawer-link .dl-icon {
