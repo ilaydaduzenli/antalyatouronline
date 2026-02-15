@@ -3001,3 +3001,32 @@ input[type=range]::-webkit-slider-thumb {
         transform: scale(0.65) !important;
     }
 }
+
+/* ORBIT MOBILE REFINEMENTS */
+@media (max-width: 768px) {
+    /* spacing fix */
+    .orbit-section {
+        padding-top: 4rem !important; /* more space for title */
+        gap: 2rem !important;
+    }
+    
+    .orbit-wrap {
+        margin-top: 0 !important; /* Reset negative margin that caused overlap */
+        transform: scale(0.65) !important;
+    }
+
+    /* Make chips bigger on mobile */
+    .orbit-chip {
+        padding: 0.6rem 1rem !important; /* Bigger touch area */
+    }
+    
+    .orbit-chip .oc-icon {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 1rem !important;
+    }
+
+    .orbit-chip .oc-name {
+        font-size: 0.85rem !important; /* Readable text */
+    }
+}
